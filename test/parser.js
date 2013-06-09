@@ -83,7 +83,7 @@ describe('parser', function () {
     });
 
     describe('decoding error handing', function () {
-      var err = null;
+      var err = { type: 'error', data: 'parser error' };
 
       it('should disallow bad format', function () {
         expect(decode(':::')).to.eql(err);
