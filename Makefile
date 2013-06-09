@@ -1,11 +1,8 @@
 
-build: components
-	@component build --dev
+REPORTER = dot
 
-components: component.json
-	@component install --dev
+test:
+	@./node_modules/.bin/mocha \
+		--reporter $(REPORTER)
 
-clean:
-	rm -fr build components template.js
-
-.PHONY: clean
+.PHONY: test
