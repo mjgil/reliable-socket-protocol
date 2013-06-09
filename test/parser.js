@@ -61,11 +61,6 @@ describe('parser', function () {
           .to.eql({ type: 'ack', data: '33' });
       });
 
-      it('should encode a missed packet', function () {
-        expect(decode(encode({ type: 'missed', data: '33' })))
-          .to.eql({ type: 'missed', data: '33' });
-      });
-
       it('should encode a message packet', function () {
         expect(decode(encode({ type: 'message', data: '33' })))
           .to.eql({ type: 'message', data: '33' });

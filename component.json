@@ -4,7 +4,10 @@
   "description": "",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "component/json": "*",
+    "component/json-fallback": "*"
+  },
   "development": {},
   "license": "MIT"
 }
