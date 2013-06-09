@@ -1,0 +1,28 @@
+{
+  "name": "reliable-socket-protocol",
+  "description": "Parser for the client for the reliable socket layer",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mjgil/reliable-socket-protocol",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "devDependencies": {
+    "mocha": "~1.10.0",
+    "expect.js": "~0.2.0"
+  },
+  "component": {
+    "scripts": {
+      "reliable-socket-parser/index.js": "lib/index.js",
+      "reliable-socket-parser/keys.js": "lib/keys.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mjgil/reliable-socket-protocol.git"
+  }
+}
