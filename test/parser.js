@@ -71,6 +71,21 @@ describe('parser', function () {
           .to.eql({ type: 'message', data: '1' });
       });
 
+      it('should encode a message packet and retain object params', function () {
+        expect(decode(encode({ type: 'message', data: {test: 3} })))
+          .to.eql({ type: 'message', data: {test: 3} });
+      });
+
+      it('should encode a message packet coercing to stringified object', function () {
+        expect(encode({ type: 'message', data: {test: 3} }))
+          .to.eql('5{"test":3}');
+      });
+
+      it('should encode a message packet coercing to stringified array', function () {
+        expect(encode({ type: 'message', data: [[1, 'data1'],[2, 'data2']] }))
+          .to.eql('5[[1,"data1"],[2,"data2"]]');
+      });
+
       it('should match the encoding format', function () {
         expect(encode({ type: 'message', data: 'test' })).to.match(/^[0-9]/);
         expect(encode({ type: 'message' })).to.match(/^[0-9]$/);
