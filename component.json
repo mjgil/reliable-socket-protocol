@@ -11,7 +11,8 @@
   "development": {},
   "main": "lib/index.js",
   "scripts": [
-    "lib/index.js"
+    "lib/index.js",
+    "lib/keys.js"
   ],
   "license": "MIT"
 }
