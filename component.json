@@ -9,5 +9,9 @@
     "component/json-fallback": "*"
   },
   "development": {},
+  "main": "lib/index.js",
+  "scripts": [
+    "lib/index.js"
+  ],
   "license": "MIT"
 }
